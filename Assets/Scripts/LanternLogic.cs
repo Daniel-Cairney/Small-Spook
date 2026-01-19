@@ -13,7 +13,7 @@ public class LanternLogic : MonoBehaviour
     private bool isOn = true;
     private float targetIntensity;
 
-    [SerializeField] private GameObject GhostPingCollider;
+    
     public static event Action GhostPing;
 
 
@@ -82,7 +82,6 @@ public class LanternLogic : MonoBehaviour
 
     public void GhostLocate()
     {
-       GhostPingCollider.SetActive(true);
        Debug.Log("Ghost tracker is on");
        GhostPing.Invoke();
     }
