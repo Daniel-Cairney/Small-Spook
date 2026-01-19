@@ -610,6 +610,18 @@ PrefabInstance:
       propertyPath: groundLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
+    - target: {fileID: 7274945934216347562, guid: 023e1f7283856f6489db25725c08f54a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6313873
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274945934216347562, guid: 023e1f7283856f6489db25725c08f54a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.77546763
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274945934216347562, guid: 023e1f7283856f6489db25725c08f54a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 101.69501
+      objectReference: {fileID: 0}
     - target: {fileID: 7296297968262569914, guid: 023e1f7283856f6489db25725c08f54a, type: 3}
       propertyPath: GhostPingCollider
       value: 
