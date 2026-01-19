@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,8 +11,10 @@ public class LanternLogic : MonoBehaviour
     [SerializeField] private float drainDuration = 30f;
     private float currentIntensity;
     private bool isOn = true;
-
     private float targetIntensity;
+
+    [SerializeField] private GameObject GhostPingCollider;
+    public static event Action GhostPing;
 
 
     private void Start()
@@ -26,13 +30,13 @@ public class LanternLogic : MonoBehaviour
         if (!isOn)
             return;
 
-        // 1. Drain the TARGET over time
+        
         float drainPerSecond = maxIntensity / drainDuration;
 
         targetIntensity -= drainPerSecond * Time.deltaTime;
         targetIntensity = Mathf.Max(targetIntensity, 0f);
 
-        // 2. Smoothly move current toward target (fade up or down)
+        
         currentIntensity = Mathf.MoveTowards(
             currentIntensity,
             targetIntensity,
@@ -41,13 +45,17 @@ public class LanternLogic : MonoBehaviour
 
         lanternLight.intensity = currentIntensity;
 
-        // 3. Turn off when empty
+       
         if (currentIntensity <= 0f)
         {
             isOn = false;
             lanternLight.enabled = false;
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            GhostLocate();
+        }
 
     }
     private void OnEnable()
@@ -72,5 +80,12 @@ public class LanternLogic : MonoBehaviour
         lanternLight.enabled = true;
     }
 
-}
+    public void GhostLocate()
+    {
+       GhostPingCollider.SetActive(true);
+       Debug.Log("Ghost tracker is on");
+       GhostPing.Invoke();
+    }
+
+}   
 

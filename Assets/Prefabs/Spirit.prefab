@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6595807958553500069}
   - component: {fileID: 4336110136488359757}
   - component: {fileID: 2106910380832862076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spiritOrb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4935,7 +4935,7 @@ GameObject:
   - component: {fileID: 3442599607387356560}
   - component: {fileID: 2721191226349542277}
   - component: {fileID: 189989186977618955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spirit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4978,8 +4978,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 10.142778
-  m_Center: {x: 1.2895412, y: 0, z: 0}
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &2721191226349542277
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5098,7 +5098,6 @@ MonoBehaviour:
   acceleration: 10
   maxSpeed: 10
   playerTransform: {fileID: 0}
-  moveToPlayer: 0
   currentSpeed: 0
 --- !u!1 &7649859274404469334
 GameObject:
@@ -5111,7 +5110,7 @@ GameObject:
   - component: {fileID: 234195230851300330}
   - component: {fileID: 8243092951392888045}
   - component: {fileID: 1276026544218461846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Point Light '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5232,7 +5231,7 @@ GameObject:
   - component: {fileID: 9208244577821613007}
   - component: {fileID: 3356743426866105936}
   - component: {fileID: 365325387913617871}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spiritBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
