@@ -722,6 +722,14 @@ PrefabInstance:
       value: 101.69501
       objectReference: {fileID: 0}
     - target: {fileID: 7296297968262569914, guid: 023e1f7283856f6489db25725c08f54a, type: 3}
+      propertyPath: drainDuration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296297968262569914, guid: 023e1f7283856f6489db25725c08f54a, type: 3}
+      propertyPath: ghostPingCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296297968262569914, guid: 023e1f7283856f6489db25725c08f54a, type: 3}
       propertyPath: GhostPingCollider
       value: 
       objectReference: {fileID: 1595910881}

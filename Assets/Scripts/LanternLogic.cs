@@ -9,6 +9,8 @@ public class LanternLogic : MonoBehaviour
     [SerializeField] private float intensityPerSpirit = 0.5f;
     [SerializeField] private float maxIntensity = 20f;
     [SerializeField] private float drainDuration = 30f;
+    [SerializeField] private float ghostPingCost = 5f;
+     [SerializeField] private float fadeSpeed = 10f; // this is not working just yet 
     private float currentIntensity;
     private bool isOn = true;
     private float targetIntensity;
@@ -50,12 +52,17 @@ public class LanternLogic : MonoBehaviour
         {
             isOn = false;
             lanternLight.enabled = false;
+            Debug.Log("Game Over");
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && targetIntensity >= ghostPingCost)
         {
+            targetIntensity -= ghostPingCost;
+            Debug.Log("should be draining");
             GhostLocate();
         }
+
+
 
     }
     private void OnEnable()
@@ -83,7 +90,7 @@ public class LanternLogic : MonoBehaviour
     public void GhostLocate()
     {
        Debug.Log("Ghost tracker is on");
-       GhostPing.Invoke();
+       GhostPing?.Invoke();
     }
 
 }   
