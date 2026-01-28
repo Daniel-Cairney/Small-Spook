@@ -625,6 +625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostPingCollider: {fileID: 1595910881}
+  pingDuration: 3
 --- !u!1001 &1526999128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -723,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296297968262569914, guid: 023e1f7283856f6489db25725c08f54a, type: 3}
       propertyPath: drainDuration
-      value: 10
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7296297968262569914, guid: 023e1f7283856f6489db25725c08f54a, type: 3}
       propertyPath: ghostPingCost
@@ -767,6 +768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostPingCollider: {fileID: 1595910881}
+  pingDuration: 10
 --- !u!4 &1649550448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3922151861339855322, guid: 43299135402064247bee69084e570ee5, type: 3}

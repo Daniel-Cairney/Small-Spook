@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class GhostSpotter : MonoBehaviour
 {
     [SerializeField] private GameObject GhostPingCollider;
+    [SerializeField] private float pingDuration = 10f;
 
     private void OnEnable()
     {
@@ -16,7 +18,7 @@ public class GhostSpotter : MonoBehaviour
 
     private void GhostPing()
     {
-        GhostPingCollider.SetActive(true);
+        StartCoroutine(PingRoutine());
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,5 +33,16 @@ public class GhostSpotter : MonoBehaviour
                 GhostPingParticles.Play();
             }
         }
+    }
+
+    private IEnumerator PingRoutine()
+    {
+       LanternLogic.IsGhostPingActive = true;
+        GhostPingCollider.SetActive(true);
+
+        yield return new WaitForSeconds(pingDuration);
+
+        GhostPingCollider.SetActive(false);
+        LanternLogic.IsGhostPingActive = (false);
     }
 }
