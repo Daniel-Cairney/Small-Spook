@@ -13,7 +13,7 @@ public class LanternLogic : MonoBehaviour
     private float currentIntensity;
     private bool isOn = true;
     private float targetIntensity;
-    public static bool IsGhostPingActive;
+    public static bool isGhostPingActive;
     
     public static event Action GhostPing;
 
@@ -54,7 +54,7 @@ public class LanternLogic : MonoBehaviour
             Debug.Log("Game Over");
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && targetIntensity >= ghostPingCost && !IsGhostPingActive)
+        if (Input.GetKeyDown(KeyCode.F) && targetIntensity >= ghostPingCost && !isGhostPingActive)
         {
             targetIntensity -= ghostPingCost;
             currentIntensity = targetIntensity;

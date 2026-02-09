@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class GhostSpotter : MonoBehaviour
 {
-    [SerializeField] private GameObject GhostPingCollider;
+    [SerializeField] private GameObject ghostPingCollider;
     [SerializeField] private float pingDuration = 10f;
+    
 
     private void OnEnable()
     {
@@ -25,6 +26,7 @@ public class GhostSpotter : MonoBehaviour
     {
         if (other.CompareTag("Spirit"))
         {
+            
             GhostPingEffect effect = other.GetComponentInChildren<GhostPingEffect>();
 
             if (effect != null)
@@ -35,14 +37,17 @@ public class GhostSpotter : MonoBehaviour
         }
     }
 
+
     private IEnumerator PingRoutine()
     {
-       LanternLogic.IsGhostPingActive = true;
-        GhostPingCollider.SetActive(true);
+       LanternLogic.isGhostPingActive = true;
+        ghostPingCollider.SetActive(true);
+        
 
         yield return new WaitForSeconds(pingDuration);
 
-        GhostPingCollider.SetActive(false);
-        LanternLogic.IsGhostPingActive = (false);
+        ghostPingCollider.SetActive(false);
+        LanternLogic.isGhostPingActive = (false);
+        
     }
 }
