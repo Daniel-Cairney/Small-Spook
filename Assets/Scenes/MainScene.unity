@@ -859,6 +859,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5038941286070853849, guid: 49011225fd9b65149ae335ccd6ab41a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5139800104534877067, guid: 49011225fd9b65149ae335ccd6ab41a7, type: 3}
       propertyPath: m_Name
       value: Spirit
